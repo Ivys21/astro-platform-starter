@@ -1,6 +1,3 @@
-/* src/styles/globals.css */
-
-/* ========== Base / Reset ========== */
 :root {
   --bg: #0b0d12;
   --surface: #111522;
@@ -9,7 +6,6 @@
   --muted: #a8b0c0;
   --border: rgba(255, 255, 255, 0.08);
 
-  /* “Marketplace vibe” (amarelo) */
   --brand: #ffe600;
   --brand-2: #ffcf00;
   --brand-ink: #1a1a1a;
@@ -18,8 +14,8 @@
   --warn: #ffb020;
   --bad: #ff4d4f;
 
-  --shadow: 0 10px 30px rgba(0,0,0,.35);
-  --shadow-soft: 0 8px 20px rgba(0,0,0,.20);
+  --shadow: 0 14px 38px rgba(0,0,0,.38);
+  --shadow-soft: 0 10px 26px rgba(0,0,0,.22);
 
   --radius: 18px;
   --radius-sm: 12px;
@@ -38,8 +34,8 @@
     --muted: #475569;
     --border: rgba(15, 23, 42, 0.10);
 
-    --shadow: 0 10px 30px rgba(15,23,42,.10);
-    --shadow-soft: 0 8px 20px rgba(15,23,42,.08);
+    --shadow: 0 12px 34px rgba(15,23,42,.12);
+    --shadow-soft: 0 8px 20px rgba(15,23,42,.10);
   }
 }
 
@@ -47,12 +43,13 @@
 html, body { height: 100%; }
 body {
   margin: 0;
-  background: radial-gradient(1200px 600px at 20% -10%, rgba(255,230,0,.18), transparent 60%),
-              radial-gradient(900px 500px at 90% 0%, rgba(0,160,255,.10), transparent 55%),
-              var(--bg);
-  color: var(--text);
   font-family: var(--font);
   line-height: 1.35;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 18% -10%, rgba(255,230,0,.18), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(0,160,255,.10), transparent 55%),
+    var(--bg);
 }
 
 a { color: inherit; text-decoration: none; }
@@ -60,18 +57,17 @@ img { max-width: 100%; display: block; }
 button, input { font: inherit; }
 ::selection { background: rgba(255,230,0,.35); }
 
-/* ========== Layout Helpers ========== */
 .container {
   width: min(var(--container), calc(100% - 32px));
   margin: 0 auto;
 }
 
-.section {
-  padding: 22px 0;
-}
+.section { padding: 22px 0; }
 
 .card {
-  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)) , var(--surface);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)),
+    var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
@@ -88,7 +84,7 @@ button, input { font: inherit; }
   background: rgba(255,255,255,.02);
 }
 
-/* ========== Buttons ========== */
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -103,7 +99,6 @@ button, input { font: inherit; }
   cursor: pointer;
   transition: transform .08s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
 }
-
 .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-soft); }
 .btn:active { transform: translateY(0px); }
 
@@ -111,14 +106,12 @@ button, input { font: inherit; }
   background: linear-gradient(180deg, var(--brand), var(--brand-2));
   border-color: rgba(0,0,0,.10);
   color: var(--brand-ink);
-  font-weight: 800;
+  font-weight: 900;
 }
 
-.btn-ghost {
-  background: transparent;
-}
+.btn-ghost { background: transparent; }
 
-/* ========== Topbar / Header ========== */
+/* Header */
 .topbar {
   position: sticky;
   top: 0;
@@ -140,7 +133,7 @@ button, input { font: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-weight: 900;
+  font-weight: 950;
   letter-spacing: -.02em;
 }
 
@@ -165,7 +158,6 @@ button, input { font: inherit; }
   border: 1px solid var(--border);
   background: rgba(255,255,255,.03);
 }
-
 .search input {
   width: 100%;
   border: 0;
@@ -173,13 +165,11 @@ button, input { font: inherit; }
   background: transparent;
   color: var(--text);
 }
-
 .actions {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
 }
-
 .iconbtn {
   width: 44px;
   height: 44px;
@@ -190,54 +180,43 @@ button, input { font: inherit; }
   place-items: center;
 }
 
-/* ========== Hero ========== */
-.hero {
-  padding: 18px 0 8px;
-}
-
+/* Hero */
+.hero { padding: 18px 0 8px; }
 .hero-grid {
   display: grid;
   grid-template-columns: 1.2fr .8fr;
   gap: 18px;
 }
-
 .hero-main {
   padding: 22px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  background: linear-gradient(135deg, rgba(255,230,0,.22), rgba(255,255,255,0) 55%),
-              linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)),
-              var(--surface);
+  background:
+    linear-gradient(135deg, rgba(255,230,0,.22), rgba(255,255,255,0) 55%),
+    linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)),
+    var(--surface);
   box-shadow: var(--shadow);
 }
-
 .hero h1 {
   margin: 0 0 10px;
   font-size: clamp(22px, 3vw, 34px);
   letter-spacing: -.03em;
 }
-
 .hero p {
   margin: 0 0 16px;
   color: var(--muted);
-  max-width: 60ch;
+  max-width: 64ch;
 }
-
 .hero-side {
   padding: 18px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)),
-              var(--surface);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)),
+    var(--surface);
 }
 
-/* ========== Category chips ========== */
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .chip {
   padding: 10px 12px;
   border-radius: 999px;
@@ -253,12 +232,8 @@ button, input { font: inherit; }
   border-color: rgba(255,230,0,.35);
 }
 
-/* ========== Product grid/cards ========== */
-.grid {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
+/* Grid & Product Card */
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
 @media (max-width: 980px) {
   .topbar-inner { grid-template-columns: 160px 1fr 180px; }
@@ -281,30 +256,23 @@ button, input { font: inherit; }
   display: flex;
   flex-direction: column;
 }
-
 .pcard:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow);
   border-color: color-mix(in srgb, var(--brand) 30%, var(--border));
 }
-
 .pimg {
   aspect-ratio: 4 / 3;
-  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0)),
-              color-mix(in srgb, var(--surface) 85%, #000);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0)),
+    color-mix(in srgb, var(--surface) 85%, #000);
   display: grid;
   place-items: center;
   overflow: hidden;
 }
-
-.pbody {
-  padding: 12px 12px 14px;
-  display: grid;
-  gap: 8px;
-}
-
+.pbody { padding: 12px 12px 14px; display: grid; gap: 8px; }
 .ptitle {
-  font-weight: 700;
+  font-weight: 750;
   letter-spacing: -.01em;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -312,59 +280,29 @@ button, input { font: inherit; }
   overflow: hidden;
   min-height: 38px;
 }
-
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.price {
-  font-size: 20px;
-  font-weight: 900;
-  letter-spacing: -.02em;
-}
-
-.badges {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
+.meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; color: var(--muted); font-size: 13px; }
+.price { font-size: 20px; font-weight: 950; letter-spacing: -.02em; }
+.badges { display: flex; gap: 8px; flex-wrap: wrap; }
 .badge {
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 900;
   padding: 6px 10px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: rgba(255,255,255,.03);
 }
-
 .badge-hot { border-color: rgba(255,77,79,.35); background: rgba(255,77,79,.12); }
 .badge-free { border-color: rgba(39,192,125,.35); background: rgba(39,192,125,.12); }
+.cta-row { display: flex; gap: 10px; margin-top: 2px; }
+.small { font-size: 12px; color: var(--muted); }
 
-.cta-row {
-  display: flex;
-  gap: 10px;
-  margin-top: 2px;
-}
-
-.small {
-  font-size: 12px;
-  color: var(--muted);
-}
-
-/* ========== Footer ========== */
+/* Footer */
 .footer {
   margin-top: 28px;
   padding: 24px 0 40px;
   border-top: 1px solid var(--border);
   color: var(--muted);
 }
-
 .footer-grid {
   display: grid;
   grid-template-columns: 1.2fr .8fr;
@@ -373,3 +311,4 @@ button, input { font: inherit; }
 @media (max-width: 780px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
+
