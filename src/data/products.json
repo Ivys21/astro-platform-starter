@@ -1,1 +1,42 @@
+[
+  {
+    "slug": "organizador-geladeira-3pcs",
+    "title": "Kit Organizador de Geladeira 3 peças (transparente)",
+    "category": "casa",
+    "priceCents": 7990,
+    "rating": 4.7,
+    "reviews": 1289,
+    "freeShipping": true,
+    "hot": true,
+    "benefits": ["Mais espaço", "Visual limpo", "Fácil de lavar"],
+    "image": "/placeholder/geladeira.png",
+    "affiliateUrl": "https://mercadolivre.com.br/SEU-LINK-AQUI"
+  },
+  {
+    "slug": "suporte-celular-carro-magnetico",
+    "title": "Suporte Magnético para Celular (carro) com fixação forte",
+    "category": "gadget",
+    "priceCents": 4590,
+    "rating": 4.6,
+    "reviews": 8120,
+    "freeShipping": false,
+    "hot": false,
+    "benefits": ["Instala em 1 min", "Não treme", "Compatível com capas"],
+    "image": "/placeholder/suporte.png",
+    "affiliateUrl": "https://mercadolivre.com.br/SEU-LINK-AQUI"
+  },
+  {
+    "slug": "bebedouro-pet-automatico",
+    "title": "Bebedouro Automático para Pet (silencioso)",
+    "category": "pet",
+    "priceCents": 14990,
+    "rating": 4.8,
+    "reviews": 3920,
+    "freeShipping": true,
+    "hot": true,
+    "benefits": ["Água sempre fresca", "Silencioso", "Fácil limpeza"],
+    "image": "/placeholder/pet.png",
+    "affiliateUrl": "https://mercadolivre.com.br/SEU-LINK-AQUI"
+  }
+]
 
